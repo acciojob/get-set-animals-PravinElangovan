@@ -1,11 +1,27 @@
-//complete this code
-class Animal {}
-
-class Dog extends Animal {}
-
-class Cat extends Animal {}
+class Rectangle {
+	constructor(width, height){
+		this._width = width;
+		this._height = height;
+	}
+	get width(){
+		return this._width;
+	}
+	get height(){
+		return this._height;
+	}
+	getArea(){
+		return this._width * this._height;
+	}
+}
+class Square extends Rectangle {
+	constructor(side){
+		super(side, side);
+	}
+	getPerimeter() {
+		return 4 * this._width;
+	}
+}
 
 // Do not change the code below this line
-window.Animal = Animal;
-window.Dog = Dog;
-window.Cat = Cat;
+window.Rectangle = Rectangle;
+window.Square = Square;
